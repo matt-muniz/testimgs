@@ -1,0 +1,85 @@
+:root{
+	--width: calc(20vw + 12em);
+	--height: calc(12vw + 5em);
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: var(--width);
+	height: var(--height);
+}
+.container{
+	position: relative;
+	width: var(--width);
+	height: calc(var(--height) + 150px);
+	overflow: hidden;
+	margin: auto;
+}
+.block1,
+.block2,
+.block3{
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	z-index: -1;
+}
+.block1::after{
+	content: 'hello';
+	position: absolute;
+	font-size: 2rem;
+	left: 0;
+	top: 100%;
+	width: auto;
+	height: auto;
+	background: red;
+}
+.block2::after{
+	content: 'hello';
+	position: absolute;
+	font-size: 2rem;
+	left: 0;
+	top: 100%;
+	width: auto;
+	height: auto;
+	background: red;
+}
+.block2,
+.block3{
+	z-index: -2;
+}
+.btn-container{
+	display: block;
+	z-index: 1;
+	float: right;
+	padding: 0.5em;
+}
+.btn-container  button{
+	padding: 1.2em 1.4em;
+	border: none;
+	opacity: 0.6;
+	cursor: pointer;
+}
+.btn-container button:hover{
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
